@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Webpage Title -->
+    <title>Facebook - 로그인 또는 가입</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 구글폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      input:focus {
+        outline: none;
+      }
+
+      div {
+        font-family: "Roboto", sans-serif;
+      }
+
+      a {
+          color: #415e9b;
+      }
+
+      #header {
+        background-color: #415e9b;
+        height: 85px;
+        margin: 0 auto;
+      }
+
+      #footer {
+        position: absolute;
+        top: 675px;
+        width: 1000px;
+        font-size: 12px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      #logo {
+        color: #ffffff;
+        height: 65px;
+        width: fit-content;
+        font-size: 40px;
+        line-height: 65px;
+        text-align: center;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        float: left;
+      }
+
+      #login {
+        width: 370px;
+        height: 70px;
+        display: inline-block;
+        position: relative;
+        top: 7.5px;
+        left: 450px;
+      }
+
+      #logintable {
+        width: 370px;
+        height: 70px;
+        font-size: 12px;
+        color: white;
+      }
+
+      #colorchange {
+        color: #9cb4d8;
+      }
+
+      .logininput {
+        border: 1px solid #1d2a5b;
+        border-radius: 1px;
+      }
+
+      #loginbutton {
+        border: 1px solid #29487d;
+        background-color: #4267b2;
+        color: white;
+        font-weight: bold;
+        border-radius: 2px;
+      }
+
+      #loginbutton:hover {
+        background-color: #415e9b;
+      }
+
+      #wrap {
+        overflow: hidden;
+        height: 590px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,d4d9e8+100 */
+        background: #ffffff; /* Old browsers */
+        background: -moz-linear-gradient(
+          top,
+          #ffffff 0%,
+          #d4d9e8 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          top,
+          #ffffff 0%,
+          #d4d9e8 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          to bottom,
+          #ffffff 0%,
+          #d4d9e8 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d4d9e8',GradientType=0 ); /* IE6-9 */
+      }
+
+      #message {
+        float: left;
+        width: 470px;
+        margin-top: 45px;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+
+      #message2 {
+        margin-right: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #0e385f;
+      }
+
+      img {
+        width: 105%;
+      }
+
+      #signup {
+        float: left;
+        width: 420px;
+        margin-left: 80px;
+        margin-top: 20px;
+      }
+
+      form div:nth-child(1) {
+          font-size: 35px;
+          font-weight: bold;
+      }
+
+      form div:nth-child(2) {
+          font-size: 20px;
+          font-weight: 500;
+      }
+
+      form div:nth-child(3){
+          width: 400px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+      }
+
+      #signuptable {
+          height: 150px;
+          text-align: center;
+      }
+
+      #signuptable input {
+          border: 1px solid rgb(172, 172, 172);
+          border-radius: 5px;
+          height: 40px;
+      }
+
+      #signupinput1, #signupinput2 {
+          width: 380px;
+      }
+
+      select {
+          font-family: none;
+          border: 1px solid rgb(172, 172, 172);
+          height: 30px;
+          width: 60px;
+          font-size: 13px;
+          float: left;
+      }
+
+      #birth {
+          color: gray;
+          font-weight: bold;
+      }
+
+      #gender {
+          color: gray;
+          font-weight: bold;
+          clear: both;
+          margin-top: 25px;
+      }
+
+      #select3 {
+          width: 50px;
+      }
+
+      .question {
+          width: 15px;
+          height: 15px;
+          background-color: #606770;
+          color: #B8BBC5;
+          font-size: 12px;
+          text-align: center;
+          line-height: 15px;
+          border: 0px;
+          border-radius: 50%;
+          margin-left: 10px;
+      }
+
+      input[type=radio] {
+          margin: 10px;
+      }
+
+      #genderchoose {
+          font-size: 18px;
+          font-weight: 500;
+      }
+
+      #notice {
+          margin-top: 7px;
+          margin-bottom: 10px;
+          width: 315px;
+          font-size: 11px;
+          color: gray;
+          font-family: none;
+      }
+
+      #signupbutton {
+          width: 180px;
+          height: 40px;
+          border: 1px solid green;
+          border-radius: 5px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#69af56+0,578944+100 */
+          background: #69af56; /* Old browsers */
+          background: -moz-linear-gradient(top,  #69af56 0%, #578944 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top,  #69af56 0%,#578944 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom,  #69af56 0%,#578944 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69af56', endColorstr='#578944',GradientType=0 ); /* IE6-9 */
+          text-shadow: 2px 2px 2px gray;
+      }
+
+      #notice2 {
+        margin-top: 15px;
+        font-size: 13px;
+        color: gray;
+        font-family: none;
+        font-weight: bold;
+      }
+
+      #footerdiv1 {
+          margin-top: 50px;
+          height: 25px;
+          line-height: 25px;
+          font-family: none;
+      }
+
+      #footerdiv1 a {
+          margin: 3px;
+      }
+
+      #morelanguage {
+          border: 1px solid rgb(168, 168, 168);
+          border-radius: 5px;
+          height: 100%;
+          width: 30px;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 100%;
+      }
+
+      #buttondiv {
+          display: inline-block;
+      }
+
+      #morelanguage:hover {
+          background-color: rgb(199, 199, 199);
+      }
+
+      #footerdiv2 a {
+          margin-right: 20px;
+          font-family: none;
+      }
+
+      hr {
+          margin: 0;
+          margin-top: 5px;
+      }
+
+      #footerdiv3 {
+        font-family: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="wrapper">
+        <div id="logo">
+          facebook
+        </div>
+        <div id="login">
+          <table id="logintable">
+            <tr>
+              <td>이메일 또는 휴대폰</td>
+              <td>비밀번호</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><input class="logininput" autofocus/></td>
+              <td><input class="logininput" /></td>
+              <td><button id="loginbutton">로그인</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><a href="#" id="colorchange">계정을 잊으셨나요?</a></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="wrap">
+      <div class="wrapper">
+        <div id="message">
+          <div id="message2">
+            Facebook에서 전세계에 있는 친구, 가족, 지인들과 함께 이야기를
+            나눠보세요.
+          </div>
+          <div><img src="이미지.png" /></div>
+        </div>
+        <div id="signup">
+            <form>
+                <div>가입하기</div>
+                <div> 빠르고 쉽습니다.</div>
+                <div>
+                    <table id="signuptable">
+                        <tr>
+                            <td><input type="text" placeholder="성(姓)"></td>
+                            <td><input type="text" placeholder="이름(성은 제외)"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input id="signupinput1" type="text" placeholder="휴대폰 번호 또는 이메일">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input id="signupinput2" type="password" placeholder="새 비밀번호">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="birth">생일</div>
+                <select name="연도">
+                    <option value="">연도</option>
+                    <option value="2020" selected>2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                </select>
+                <select name="월">
+                    <option value="">월</option>
+                    <option value="1">1월</option>
+                    <option value="2">2월</option>
+                    <option value="3">3월</option>
+                    <option value="4">4월</option>
+                    <option value="5">5월</option>
+                    <option value="6">6월</option>
+                    <option value="7" selected>7월</option>
+                    <option value="8">8월</option>
+                    <option value="9">9월</option>
+                    <option value="10">10월</option>
+                    <option value="11">11월</option>
+                    <option value="12">12월</option>
+                </select>
+                <select id="select3" name="일">
+                    <option value="">일</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7" selected>7</option>
+                </select>
+                <button class="question">?</button>
+                <div id="gender">성별</div>
+                <div id="genderchoose">
+                <input type="radio" name="gender" value="여성">여성
+                <input type="radio" name="gender" value="남성">남성
+                <input type="radio" name="gender" value="직접 지정">직접 지정
+                <button class="question">?</button>
+            </div>
+            <div id="notice">가입하기 버튼을 클릭하면 Facebook의 <a href="#">약관</a>, <a href="#">데이터 정책</a> 및 <a href="#">쿠키 정책</a>에 동의하게 됩니다. Facebook으로부터 SMS 알림을 받을 수 있으며 알림은 언제든지 옵트 아웃할 수 있습니다.</div>
+            <button id="signupbutton" type="submit">가입하기</button>
+            <div id="notice2">유명인, 밴드, 비즈니스를 위한 <a href="#">페이지 만들기</a></div>
+            </form>
+      </div>
+    </div>
+
+    <div class="wrapper">
+    <div id="footer">
+        <div id="footerdiv1">
+            한국어 <a href="#">English (US)</a> <a href="#">Tiếng Việt</a> <a href="#">Bahasa Indonesia</a> <a href="#">ภาษาไทย</a> <a href="#">Español</a> <a href="#">中文(简体)</a> <a href="#">日本語</a> <a href="#">Português (Brasil)</a> <a href="#">Français (France)</a> <a href="#">Deutsch</a>
+            <div id=buttondiv><button type="button" id="morelanguage">+</button></div>
+        </div>
+        <hr>
+        <div id="footerdiv2">
+            <a href="#">가입하기</a> <a href="#">로그인</a> <a href="#">Messenger</a> <a href="#">Facebook Lite</a> <a href="#">Watch</a> <a href="#">사람</a> <a href="#">페이지</a><a href="#">페이지 카테고리</a>
+            <a href="#">장소</a> <a href="#">게임</a> <a href="#">위치</a> <a href="#">Marketplace</a> <a href="#">Facebook 페이</a> <a href="#">그룹</a> <a href="#">Oculus</a>
+            <a href="#">Portal</a> <a href="#">Instagram</a> <a href="#">지역</a> <a href="#">기부 캠페인</a> <a href="#">서비스</a> <a href="#">회사소개</a> <a href="#">광고 만들기</a> <a href="#">페이지 만들기</a>
+            <a href="#">개발자</a> <a href="#">채용 정보</a> <a href="#">개인정보처리방침</a> <a href="#">쿠키</a> <a href="#">AdChoices</a> <a href="#">이용 약관</a> <a href="#">고객 센터</a>
+        </div>
+        <p></p>
+        <div id="footerdiv3">Facebook © 2020</div>
+        <p></p>
+    </div>
+    </div>
+  </body>
+</html>
