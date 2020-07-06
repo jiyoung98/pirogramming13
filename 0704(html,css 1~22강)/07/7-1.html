@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      #header {
+        width: 500px;
+        background-color: #ffd800;
+        border: 1px solid #808080;
+        text-align: center;
+      }
+
+      #wrap {
+        width: 500px;
+        background-color: #66dbf6;
+        border: 2px solid #808080;
+        text-align: center;
+        overflow: hidden;
+        /* float:left지정을 해 주려면 그것을 감싸고 있는 것에 overflow: hidden 지정을 해주어야 한다.; */
+      }
+
+      #content {
+        width: 350px;
+        border: 1px solid red;
+        float: left;
+        /* 원래는 content와 side_banner가 모두 block타입의 div이기 때문에 아래로 나와야 하지만 float:left로 지정을 함으로써 옆에 나오게 했다. */
+      }
+
+      #side_banner {
+        border: 1px solid red;
+        float: left;
+      }
+
+      #footer {
+        clear: both;
+        /* float:left속성은 계속해서 아래로 영향을 미친다. 따라서 그것을 제외하기 위해서 clear:both 속성을 주었다. */
+        width: 500px;
+        background-color: #ffd800;
+        border: 3px solid #808080;
+        text-align: center;
+      }
+
+      .menu1 {
+        color: #1822e2;
+        font-weight: bold;
+      }
+
+      .menu1,
+      .menu3,
+      .menu5 {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>HEADER</h1>
+    </div>
+
+    <div id="wrap">
+      <div id="content">
+        <h1>CONTENT</h1>
+        <ul>
+          <li class="menu1">menu1</li>
+          <li class="menu2">menu2</li>
+          <li class="menu3">menu3</li>
+          <li class="menu4">menu4</li>
+          <li class="menu5">menu5</li>
+        </ul>
+      </div>
+      <div id="side_banner">
+        <h1>BANNER</h1>
+        <a href="http://www.sba.seoul.kr" target="_blank"
+          ><img src="http://www.sba.seoul.kr/kr/images/footer/f_logo.png"
+        /></a>
+      </div>
+    </div>
+
+    <div id="footer">
+      <h1>FOOTER</h1>
+    </div>
+  </body>
+</html>
