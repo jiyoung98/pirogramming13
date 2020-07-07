@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      nav {
+        text-align: center;
+        position: fixed;
+        background-color: white;
+        z-index: 3;
+      }
+
+      p {
+        height: 75px;
+      }
+
+      nav div {
+        width: 300px;
+        height: 75px;
+        display: inline-block;
+        line-height: 75px;
+        text-align: center;
+        font-size: 30px;
+        border: 1px solid black;
+        margin-right: -6px;
+        margin-top: -8px;
+        background-color: white;
+      }
+
+      nav div:hover {
+        background-color: gray;
+      }
+
+      #content {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 1000px;
+        border: 1px solid black;
+      }
+
+      #parent {
+        position: relative;
+      }
+
+      #son {
+        position: relative;
+        top: 100px;
+        z-index: 1;
+      }
+
+      #contenttitle {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      #contentmessage {
+        margin: 10px;
+      }
+
+      #mainimg {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="navdiv">
+        <nav>
+          <div><a href="#html">HTML</a></div>
+          <div><a href="#css">CSS</a></div>
+          <div><a href="#python">PYTHON</a></div>
+          <div><a href="#django">DJANGO</a></div>
+          <div><a href="#teamproject">TEAM PROJECT</a></div>
+        </nav>
+      </div>
+      <div id="enter"></div>
+
+      <div id="son">
+        <div id="content">
+          <div id="subcontent">
+            <a name="html"></a>
+            <div id="contenttitle">1. HTML</div>
+            <div id="contentmessage">1주차에는 html을 배웁니다.</div>
+            <div><img src="angels.jpg" id="mainimg" /></div>
+          </div>
+        </div>
+        <div id="content">
+          <div id="subcontent">
+            <a name="css"></a>
+            <div id="contenttitle">2. CSS</div>
+            <div id="contentmessage">2주차에는 css를 배웁니다.</div>
+            <div><img src="angels.jpg" id="mainimg" /></div>
+          </div>
+        </div>
+        <div id="content">
+          <div id="subcontent">
+            <a name="python"></a>
+            <div id="contenttitle">3. PYTHON</div>
+            <div id="contentmessage">3주차에는 python을 배웁니다.</div>
+            <div><img src="angels.jpg" id="mainimg" /></div>
+          </div>
+        </div>
+        <div id="content">
+          <div id="subcontent">
+            <a name="django"></a>
+            <div id="contenttitle">4. DJANGO</div>
+            <div id="contentmessage">4주차에는 django를 배웁니다.</div>
+            <div><img src="angels.jpg" id="mainimg" /></div>
+          </div>
+        </div>
+        <div id="content">
+          <div id="subcontent">
+            <a name="teamproject"></a>
+            <div id="contenttitle">5. TEAM PROJECT</div>
+            <div id="contentmessage">5주차에는 team project를 합니다.</div>
+            <div><img src="angels.jpg" id="mainimg" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
