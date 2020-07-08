@@ -1,0 +1,5 @@
+#wrap .content {
+    color: white;
+    background-color: tomato;
+    padding: 30px 10px;
+}
