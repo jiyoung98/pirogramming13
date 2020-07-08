@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="grid.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+
+      .grid_6,
+      .grid_4,
+      .grid_4 {
+        margin: 5px 0;
+      }
+
+      .container_12 {
+        border: 1px solid black;
+      }
+
+      .header {
+        margin: 0;
+      }
+
+      .header .gnb {
+        width: 600px;
+        margin: 0 auto;
+        border-bottom: 1px solid black;
+      }
+      .header .gnb ul {
+        overflow: hidden;
+        padding: 10px;
+      }
+      .header .gnb ul li {
+        float: left;
+        width: 20%;
+        font-size: 1.5em;
+        text-align: center;
+        border-right: 1px dashed lightgray;
+        border-left: 1px dashed lightgray;
+        box-sizing: border-box;
+      }
+      .header .logo div {
+        margin: 30px auto;
+        width: 300px;
+        height: 100px;
+        line-height: 100px;
+        border: 1px solid lightgray;
+        text-align: center;
+      }
+
+      .section1 div:nth-child(1) {
+        margin-right: 20px;
+      }
+      .grid_6 {
+        height: 200px;
+        background-color: lightgray;
+      }
+
+      .section2 div:nth-child(1),
+      .section2 div:nth-child(2) {
+        margin-right: 20px;
+      }
+      .grid_4 {
+        height: 100px;
+        background-color: lightgray;
+      }
+
+      .section3 div:nth-child(1),
+      .section3 div:nth-child(2),
+      .section3 div:nth-child(3) {
+        margin-right: 20px;
+      }
+      .grid_3 {
+        height: 100px;
+        background-color: lightgray;
+      }
+
+      .footer {
+        height: 100px;
+        border-top: 1px solid lightgray;
+      }
+      .footer div {
+        text-align: center;
+        height: 100px;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container_12">
+      <div class="grid_12 header">
+        <div class="gnb">
+          <ul>
+            <li><a>GNB1</a></li>
+            <li><a>GNB2</a></li>
+            <li><a>GNB3</a></li>
+            <li><a>GNB4</a></li>
+          </ul>
+        </div>
+        <div class="logo">
+          <div>LOGO</div>
+        </div>
+      </div>
+      <div class="clear"></div>
+
+      <div class="section1">
+        <div class="grid_6">section1</div>
+        <div class="grid_6">section1</div>
+        <div class="clear"></div>
+      </div>
+      <div class="section2">
+        <div class="grid_4">section2</div>
+        <div class="grid_4">section2</div>
+        <div class="grid_4">section2</div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="section3">
+        <div class="grid_3">section3</div>
+        <div class="grid_3">section3</div>
+        <div class="grid_3">section3</div>
+        <div class="grid_3">section3</div>
+        <div class="clear"></div>
+      </div>
+
+      <div class="grid_12 footer">footer</div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>
