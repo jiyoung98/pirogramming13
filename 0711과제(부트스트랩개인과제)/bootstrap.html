@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bootstrap</title>
+
+    <!-- bootstrap css-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap js-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- style -->
+    <!-- bootstrap 속성을 바꾸기 위하여 오버라이딩 시 우선순위인 <style></style> 태그에 css 작성 -->
+
+    <style>
+      @media screen and (min-width: 600px) {
+        .bg-light {
+          background-color: rgb(53, 58, 64) !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+          color: rgb(115, 120, 124) !important;
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light .navbar-nav .active > .nav-link {
+          color: white !important;
+        }
+
+        .wrap {
+          float: center;
+        }
+
+        .content_wrap {
+          margin: 1.5% 5% 3% 5%;
+          width: 65%;
+          float: left;
+        }
+
+        .content_wrap .card {
+          background-color: rgb(215, 216, 218);
+        }
+
+        .content_wrap .card .card-title {
+          font-weight: 600;
+          text-align: center;
+          font-size: 40px;
+        }
+
+        .row {
+          margin-top: 4%;
+          margin-bottom: 3%;
+        }
+
+        .row .card-title-2 {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
+        .row .card-content-2 {
+          margin-top: 1%;
+          margin-bottom: 1%;
+        }
+
+        .row .btn-outline-secondary {
+          margin-top: 2%;
+          margin-bottom: 2%;
+        }
+
+        .btn-wrap {
+          width: 17%;
+          float: left;
+        }
+
+        .btn-group-vertical {
+          width: 100%;
+        }
+
+        .listbutton {
+          border: 0.5px solid lightgray;
+          text-align: left;
+        }
+
+        .footer2 {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .bg-light {
+          background-color: rgb(53, 58, 64) !important;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+          color: rgb(115, 120, 124) !important;
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light .navbar-nav .active > .nav-link {
+          color: white !important;
+        }
+
+        .wrap {
+          overflow: hidden;
+        }
+
+        .content_wrap {
+          margin: 1.5% 10% 3% 10%;
+          width: 80%;
+          float: center;
+          overflow: hidden;
+        }
+
+        .content_wrap .card {
+          background-color: rgb(215, 216, 218);
+        }
+
+        .content_wrap .card .card-title {
+          font-weight: 600;
+          text-align: center;
+          font-size: 40px;
+        }
+
+        .row {
+          margin-top: 4%;
+          margin-bottom: 3%;
+        }
+
+        .row .card-title-2 {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
+        .row .card-content-2 {
+          margin-top: 1%;
+          margin-bottom: 1%;
+        }
+
+        .row .btn-outline-secondary {
+          margin-top: 2%;
+          margin-bottom: 2%;
+        }
+
+        .btn-wrap {
+          width: 80%;
+          float: center;
+          margin: 0% 10% 0% 10%;
+        }
+
+        .btn-group-vertical {
+          width: 100%;
+        }
+
+        .listbutton {
+          border: 0.5px solid lightgray;
+          text-align: left;
+        }
+
+        .footer2 {
+          margin: 5% 0% 10% 0%;
+        }
+
+        .footer1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- wrap -->
+    <div class="wrap">
+      <!-- content_wrap-->
+      <div class="content_wrap">
+        <!-- upper-card -->
+        <div class="card">
+          <div class="card-body">
+            <div class="card-title">Young</div>
+            <div class="card-content">
+              We both know I go too far like when I wrecked your car And almost
+              fought your father when he pushed me in the yard And all those
+              nights we snuck out, like to meet up at the bar Don't worry, my
+              love, we're learning to love But it's hard when you're young
+            </div>
+          </div>
+        </div>
+
+        <!-- lower-card -->
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 col-sm-12 card-2">
+            <div class="card-title-2">paris</div>
+            <div class="card-content-2">
+              We were staying in Paris To get away from your parents And I
+              thought, "Wow if I could take this in a shot right now I don't
+              think that we could work this out" Out on the terrace I don't know
+              if it's fair but I thought
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              View details >>
+            </button>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 card-2">
+            <div class="card-title-2">paris</div>
+            <div class="card-content-2">
+              We were staying in Paris To get away from your parents And I
+              thought, "Wow if I could take this in a shot right now I don't
+              think that we could work this out" Out on the terrace I don't know
+              if it's fair but I thought
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              View details >>
+            </button>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 card-2">
+            <div class="card-title-2">paris</div>
+            <div class="card-content-2">
+              We were staying in Paris To get away from your parents And I
+              thought, "Wow if I could take this in a shot right now I don't
+              think that we could work this out" Out on the terrace I don't know
+              if it's fair but I thought
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              View details >>
+            </button>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 card-2">
+            <div class="card-title-2">paris</div>
+            <div class="card-content-2">
+              We were staying in Paris To get away from your parents And I
+              thought, "Wow if I could take this in a shot right now I don't
+              think that we could work this out" Out on the terrace I don't know
+              if it's fair but I thought
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              View details >>
+            </button>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 card-2">
+            <div class="card-title-2">paris</div>
+            <div class="card-content-2">
+              We were staying in Paris To get away from your parents And I
+              thought, "Wow if I could take this in a shot right now I don't
+              think that we could work this out" Out on the terrace I don't know
+              if it's fair but I thought
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              View details >>
+            </button>
+          </div>
+          <div class="col-lg-4 col-md-12 col-sm-12 card-2">
+            <div class="card-title-2">paris</div>
+            <div class="card-content-2">
+              We were staying in Paris To get away from your parents And I
+              thought, "Wow if I could take this in a shot right now I don't
+              think that we could work this out" Out on the terrace I don't know
+              if it's fair but I thought
+            </div>
+            <button type="button" class="btn btn-outline-secondary">
+              View details >>
+            </button>
+          </div>
+        </div>
+
+        <!-- footer1 -->
+        <div class="footer1">ⓒ 2019 Pirogramming, Inc.</div>
+      </div>
+
+      <!--list-->
+      <div class="btn-wrap">
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-primary listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+          <button type="button" class="btn btn-link listbutton">
+            List
+          </button>
+        </div>
+
+        <!-- footer2 -->
+        <div class="footer2">ⓒ 2019 Pirogramming, Inc.</div>
+      </div>
+    </div>
+  </body>
+</html>
